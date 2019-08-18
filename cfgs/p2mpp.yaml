@@ -1,0 +1,27 @@
+is_debug: no
+# 3 + 3*(512+256+128+64)
+feat_dim: 2883
+# 3 + 3*(16+32+64)
+stage2_feat_dim: 339
+name: 'refine_p2mpp'
+save_path: 'results'
+# about cnn
+load_cnn: yes
+pre_trained_cnn_path: 'results/coarse_mvp2m/models'
+cnn_step: 50
+# train
+lr: 1e-5
+epochs: 10
+init_epoch: 50
+gpu_id: 0
+restore: false
+train_file_path: 'data/train_list.txt'
+train_data_path: '/home/your_user_name/data/ShapeNetModels/train'
+train_image_path: '/home/your_user_name/data/ShapeNetImages/ShapeNetRendering'
+train_mesh_root: 'results/coarse_mvp2m/coarse_intermediate/50'
+# test
+test_epoch: 10
+test_file_path: 'data/test_list.txt'
+test_data_path: '/home/your_user_name/data/ShapeNetModels/test'
+test_image_path: '/home/your_user_name/data/ShapeNetImages/ShapeNetRendering'
+test_mesh_root: 'results/coarse_mvp2m/predict/50'

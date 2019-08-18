@@ -1,0 +1,22 @@
+lr: 1e-5
+init_epoch: 0
+epochs: 50
+test_epoch: 50
+restore: false
+gpu_id: 0
+is_debug: no
+feat_dim: 2883
+name: 'coarse_mvp2m'
+save_path: 'results'
+# train
+train_file_path: 'data/train_list.txt'
+train_data_path: '/home/your_user_name/data/ShapeNetModels/train'
+train_image_path: '/home/your_user_name/data/ShapeNetImages/ShapeNetRendering'
+# test
+test_file_path: 'data/test_list.txt'
+test_data_path: '/home/your_user_name/data/ShapeNetModels/test'
+test_image_path: '/home/your_user_name/data/ShapeNetImages/ShapeNetRendering'
+# coarse result
+coarse_result_file_path: 'data/train_list.txt'
+coarse_result_data_path: '/home/your_user_name/data/ShapeNetModels/train'
+coarse_result_image_path: '/home/your_user_name/data/ShapeNetImages/ShapeNetRendering'
