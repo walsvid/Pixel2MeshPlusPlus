@@ -1,0 +1,202 @@
+<html>
+
+<head>
+    <link rel="StyleSheet" href="style.css" type="text/css" media="all">
+    <title>Pixel2Mesh++</title>
+    <meta property="og:title" content="Pixel2Mesh++: Multi-View 3D Mesh Generation via Deformation">
+    <meta property="og:image" content="https://www.cs.cmu.edu/~wyuan1/cmr/resources/images/shapenet.png">
+    <meta property="og:url" content="https://youtu.be/bzJrPQilPxg">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body>
+    <br>
+    <div class="center-div">
+        <span style="font-size:40px">Pixel2Mesh++: Multi-View 3D Mesh Generation via Deformation</span>
+    </div>
+
+    <br>
+    <table align="center" width="800px">
+        <tbody>
+            <tr>
+                <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Chao Wen</a></span>
+                    </div>
+                </td>
+
+                <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Yinda Zhang</a></span>
+                    </div>
+                </td>
+
+                <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Zhuwen Li</a></span>
+                    </div>
+                </td>
+
+                <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px"><a href="#">Yanwei Fu</a></span>
+                    </div>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <table align="center" width="700px">
+        <tbody>
+            <tr>
+                <td align="center" width="100px">
+                    <div class="center-div">
+                        <span style="font-size:22px">Fudan University &nbsp; &nbsp; Google LLC &nbsp; &nbsp; Nuro, Inc.</span>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <table align="center" width="600px">
+        <tbody>
+            <tr>
+                <td>
+                    <div class="center-div">
+                        <a href="#"><img src="./resources/images/pipeline.png" width="1000px"></a><br>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="center-div">
+                        <span style="font-size:14px"><i>Pixel2Mesh++ Shape Generation Pipeline.</i>
+                        </span></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+
+    <hr>
+    <div class="center-div">
+        <h1>Abstract</h1>
+    </div>
+    <p>
+        We study the problem of shape generation in 3D mesh representation from a few color images with known camera
+        poses. While many previous works learn to hallucinate the shape directly from priors, we resort to further
+        improving the shape quality by leveraging cross-view information with a graph convolutional network. Instead of
+        building a direct mapping function from images to 3D shape, our model learns to predict series of deformations
+        to improve a coarse shape iteratively. Inspired by traditional multiple view geometry methods, our network
+        samples nearby area around the initial mesh's vertex locations and reasons an optimal deformation using
+        perceptual feature statistics built from multiple input images. Extensive experiments show that our model
+        produces accurate 3D shape that are not only visually plausible from the input perspectives, but also well
+        aligned to arbitrary viewpoints. With the help of physically driven architecture, our model also exhibits
+        generalization capability across different semantic categories, number of input images, and quality of mesh
+        initialization.
+    </p>
+    <br><br>
+
+    <hr>
+    <div class="center-div">
+        <h1 id="code">Network Architecture</h1>
+    </div>
+    <div class="center-div">
+        <img class="round" style="height:400" src="./resources/images/architecture.png">
+    </div>
+    <br><br>
+
+    <hr>
+    <div class="center-div">
+        <h1 id="paper">Paper, Code and Data</h1>
+    </div>
+    <table align="center" width="600px">
+
+        <tbody>
+            <tr>
+                <td>
+                    <img class="layered-paper-big" style="height:175px" src="./resources/images/page1.png">
+                </td>
+                <td>
+                    <span style="font-size:14pt">C. Wen, Y. Zhang, Z. Li, Y. Fu.</span>
+                    <br><br>
+                    <b><span style="display:inline-block;width:600px;font-size:14pt">Pixel2Mesh++: Multi-View 3D Mesh
+                            Generation via Deformation.</span></b>
+                    <br><br>
+                    <span style="font-size:14pt">ICCV, 2019.</span>
+                    <br><br>
+                    <span style="font-size:20px">
+                        <a href="#">[arXiv]</a> &nbsp; &nbsp;
+                        <a href="./resources/bibtex.txt">[Bibtex]</a> &nbsp; &nbsp; 
+                        <a href="#">[GitHub]</a> &nbsp; &nbsp;
+                        <a href="#">[Google Drive]</a>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+
+    <hr>
+    <div class="center-div">
+        <h1 id="code">Results</h1>
+    </div>
+    <div class="center-div">
+        <table align="center" width="600px">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="center-div">
+                            <img src="./resources/images/shapenetresults.png" width="400px"><br>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="center-div">
+                            <img src="./resources/images/gene.png" width="400px"><br>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="center-div">
+                            <span style="font-size:14px"><i>Results on ShapeNet objects.</i>
+                            </span></div>
+                    </td>
+                    <td>
+                        <div class="center-div">
+                            <span style="font-size:14px"><i>Robustness to Initialization.</i>
+                            </span></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <br><br>
+    <hr>
+    <table align="center" width="980px">
+        <tbody>
+            <tr>
+                <td>
+                    <left>
+                        <div class="center-div">
+                            <h1>Acknowledgements</h1>
+                        </div>
+                        <div class="center-div">
+                        This work is supported by the STCSM project (19ZR1471800), and Eastern Scholar (TP2017006). We would also like to thank Pixel2Mesh. The websiteis
+                        modified from this <a href="https://www.cs.cmu.edu/~wyuan1/pcn/">template</a>.
+                        </div>
+                    </left>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+
+
+</body>
+
+</html>
