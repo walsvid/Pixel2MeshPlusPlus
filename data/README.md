@@ -5,7 +5,7 @@
 ### Download link
 Google Drive: [https://drive.google.com/drive/folders/1bLhqXNoBxHh5PTbjoyqMnMtBzHwflL-q?usp=sharing](https://drive.google.com/drive/folders/1bLhqXNoBxHh5PTbjoyqMnMtBzHwflL-q?usp=sharing)
 
-Direct Link: [fudan](fudan)
+Direct Link: [http://www.sdspeople.fudan.edu.cn/fuyanwei/download/Pixel2MeshPlusPlus/](fudan)
 
 ### Usage
 The downloaded pre-training model zip file includes two components of our model: coarse shape generation and multi-view deformation network.
