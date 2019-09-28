@@ -13,7 +13,7 @@ If you have any question, please contact Chao Wen (cwen18 at fudan dot edu dot c
 If you use this code for any purpose, please consider citing:
 
 ```
-@inProceedings{wang2018pixel2mesh,
+@inProceedings{wen2019pixel2mesh++,
   title={Pixel2Mesh++: Multi-View 3D Mesh Generation via Deformation},
   author={Chao Wen and Yinda Zhang and Zhuwen Li and Yanwei Fu},
   booktitle={ICCV},
