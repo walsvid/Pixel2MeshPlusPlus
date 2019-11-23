@@ -5,7 +5,7 @@
 ### Download link
 Google Drive: [https://drive.google.com/drive/folders/1bLhqXNoBxHh5PTbjoyqMnMtBzHwflL-q?usp=sharing](https://drive.google.com/drive/folders/1bLhqXNoBxHh5PTbjoyqMnMtBzHwflL-q?usp=sharing)
 
-Direct Link: [http://www.sdspeople.fudan.edu.cn/fuyanwei/download/Pixel2MeshPlusPlus/](fudan)
+Direct Link: [http://www.sdspeople.fudan.edu.cn/fuyanwei/download/Pixel2MeshPlusPlus/](http://www.sdspeople.fudan.edu.cn/fuyanwei/download/Pixel2MeshPlusPlus/)
 
 ### Usage
 The downloaded pre-training model zip file includes two components of our model: coarse shape generation and multi-view deformation network.
@@ -44,7 +44,8 @@ When using the provided data make sure to respect the shapenet [license](https:/
 Download ground-truth models and place them in a folder:
 ```
 mkdir ShapeNetModels
-wget fudan
+wget http://www.sdspeople.fudan.edu.cn/fuyanwei/download/Pixel2MeshPlusPlus/p2mpp_models.tar.gz
+tar xzvf p2mpp_models.tar.gz
 ```
 We also provided Google Drive [link](https://drive.google.com/drive/folders/1bLhqXNoBxHh5PTbjoyqMnMtBzHwflL-q?usp=sharing) for ground truth models data.
 
