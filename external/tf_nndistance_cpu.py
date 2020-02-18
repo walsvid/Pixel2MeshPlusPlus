@@ -4,16 +4,23 @@ import numpy as np
 def nn_distance_cpu(pc1, pc2):
     '''
     Input:
-        pc1: float TF tensor in shape (B,N,C) the first point cloud
-        pc2: float TF tensor in shape (B,M,C) the second point cloud
+        pc1: float TF tensor in shape (N,C) the first point cloud
+        pc2: float TF tensor in shape (M,C) the second point cloud
+        After expand, we add batch dimension.
+        pc1: (B,N,C)
+        pc2: (B,M,C)
     Output:
         dist1: float TF tensor in shape (B,N) distance from first to second
         idx1: int32 TF tensor in shape (B,N) nearest neighbor from first to second
         dist2: float TF tensor in shape (B,M) distance from second to first
         idx2: int32 TF tensor in shape (B,M) nearest neighbor from second to first
     '''
-    N = pc1.get_shape()[1].value
-    M = pc2.get_shape()[1].value
+    pc1 = tf.expand_dims(pc1, 0)
+    pc2 = tf.expand_dims(pc2, 0)
+    #N = pc1.get_shape()[1].value
+    N = tf.shape(pc1)[1]
+    #M = pc2.get_shape()[1].value
+    M = tf.shape(pc2)[1]
     pc1_expand_tile = tf.tile(tf.expand_dims(pc1,2), [1,1,M,1])
     pc2_expand_tile = tf.tile(tf.expand_dims(pc2,1), [1,N,1,1])
     pc_diff = pc1_expand_tile - pc2_expand_tile # B,N,M,C
@@ -37,7 +44,7 @@ def verify_nn_distance_cup():
     print(sess.run(idx1))
     print(sess.run(dist2))
     print(sess.run(idx2))
-    
+
     dist = np.zeros((5,6))
     for i in range(5):
         for j in range(6):
