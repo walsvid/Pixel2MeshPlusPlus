@@ -30,6 +30,8 @@ Requirements:
 - Tensorflow==1.12.0
 - tflearn==0.3.2
 - opencv-python
+- pyyaml
+- scipy
 
 Our code has been tested with Python 3.6, TensorFlow 1.12.0, CUDA 9.0 on Ubuntu 16.04.
 
