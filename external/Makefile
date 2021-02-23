@@ -1,6 +1,10 @@
-nvcc=/home/wc/resource/cuda-9.0/bin/nvcc
-cudalib=/home/wc/resource/cuda-9.0/lib64
-TF_CFLAGS=( $(python -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_compile_flags()))') )
+# The flags didn't work for me, 
+# so I printed the output of the command in a terminal and changed the references in the makefile
+nvcc= # Find the nvcc file using find / -name nvcc
+cudalib= # Find folder this using find / -name libcudart.so 
+
+#I didn't use the variables, I copied the output on lines 15, 19, 23 and 27 instead of ${TF_XFLAGS}
+TF_CFLAGS=  ( $(python -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_compile_flags()))') )
 TF_LFLAGS=( $(python -c 'import tensorflow as tf; print(" ".join(tf.sysconfig.get_link_flags()))') )
 
 
