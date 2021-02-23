@@ -39,6 +39,13 @@ If you use Chamfer Distance for training or evaluation, we have included the cud
 
 We recommend readers to follow the official tutorial of Tensorflow for how to compile the CUDA code. Please refer to [official tutorial](https://www.tensorflow.org/guide/extend/op#gpu_support).
 
+*Addition from author's first documentation*
+
+The official tutorial's link doesn't work anymore. I've followed [this link instead](https://www.tensorflow.org/guide/create_op).
+
+The `make` command didn't work for me. I had to modify it to compile the code for another CUDA version (10 in my case). I've added archives for the original .so and .cu.o files. There are also changes inside the Makefile file you'll need to look into if you want to compile your own version.
+
+In order to make things work, copy the content from the archive of your CUDA version into the `external` folder.
 
 ## Dataset
 
